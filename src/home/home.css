@@ -1,0 +1,292 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu--principal {
+  display: flex;
+  gap: 2rem;
+}
+
+.menu__link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.menu__link.active {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.hero {
+  text-align: center;
+  padding: 6rem 1rem;
+  background-image: url("https://agenciacrab.com/site/wp-content/uploads/2016/05/agenciacrab-sites.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  position: relative;
+}
+
+.hero h1,
+.hero p {
+  position: relative;
+  z-index: 1;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  border-right: 0.15em solid white;
+  white-space: nowrap;
+  width: 0;
+  animation: typing 6s steps(40, end) infinite, blink 0.75s step-end infinite;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  opacity: 0;
+  animation: fadeIn 2s forwards 3s;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.btn--primary {
+  background-color: #28a745;
+}
+
+.btn--primary:hover {
+  background-color: #218838;
+}
+
+.services {
+  padding: 4rem 1rem;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.service-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.service-item {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #007bff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
+  width: 150px;
+  text-align: center;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.service-item img {
+  width: 40px;
+  margin-bottom: 1rem;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.contact {
+  padding: 4rem 1rem;
+  text-align: center;
+  background-color: #007bff;
+  color: #fff;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact p {
+  font-size: 1.25rem;
+}
+
+.cta {
+  text-align: center;
+  padding: 4rem 1rem;
+  background-color: #0056b3;
+  /* background-image: url("https://www.criacaositesfortaleza.com.br/wp-content/uploads/2018/04/precos-de-criacao-de-sites-baratos.jpg"); */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.cta .btn--primary {
+  background-color: #007bff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta .btn--primary:hover {
+  background-color: #0056b3;
+}
+
+.our-services {
+  padding: 4rem 1rem;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+.our-services h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: inherit;
+}
+
+.service-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.service-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  border-radius: none;
+  box-shadow: none;
+  padding: 1rem;
+}
+
+.service-image {
+  width: 45%;
+  border-radius: 10px;
+}
+
+.service-text {
+  width: 45%;
+  text-align: left;
+}
+
+.service-text h3 {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+.service-text p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: inherit;
+}
+
+.service-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.service-text li {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  color: inherit;
+}
+
+.service-text li::before {
+  content: "✔";
+  color: inherit;
+  margin-right: 0.5rem;
+}
