@@ -1,0 +1,68 @@
+.contato-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.contato-info {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.contato-item {
+  display: flex;
+  align-items: center;
+}
+
+.contato-item img {
+  width: 30px; /* Ajuste a largura conforme necessário */
+  height: auto; /* Mantém a proporção da imagem */
+  margin-right: 10px;
+}
+
+.contato-item a {
+  color: inherit; /* Herda a cor do texto pai */
+  text-decoration: none; /* Remove o sublinhado */
+  transition: color 0.3s; /* Transição suave para a cor */
+}
+
+.contato-item a:hover {
+  color: #007bff; /* Cor ao passar o mouse */
+  text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+.contato-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contato-form label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.contato-form input,
+.contato-form select,
+.contato-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contato-form button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.contato-form button:hover {
+  background-color: #0056b3;
+}

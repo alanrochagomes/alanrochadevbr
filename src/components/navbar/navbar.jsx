@@ -1,24 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import "../../components/navbar/navbar.css";
 
+import Logo from "../../assets/ALANROCHA.png";
+
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <a href="https://flowbite.com/" className="navbar-brand">
-          <img
-            src="https://flowbite.com/docs/images/logo.svg"
-            className="navbar-logo"
-            alt="Flowbite Logo"
-          />
+        <a href="/" className="navbar-brand">
+          <img src={Logo} className="navbar-logo" alt="AlanRocha.Dev Logo" />
           <span className="navbar-title">alanrocha.dev</span>
         </a>
+
         <button
+          onClick={toggleMenu}
           className="navbar-toggle"
           aria-controls="navbar-default"
-          aria-expanded="false"
+          aria-expanded={isOpen}
         >
-          <span className="sr-only">Open main menu</span>
+          <span className="sr-only"></span>
           <svg
             className="navbar-icon"
             aria-hidden="true"
@@ -35,27 +42,50 @@ const Navbar = () => {
             />
           </svg>
         </button>
-        <div className="navbar-menu" id="navbar-default">
+
+        <div
+          className={`navbar-menu ${isOpen ? "open" : ""}`}
+          id="navbar-default"
+        >
           <ul className="navbar-list">
             <li>
-              <a href="#" className="navbar-link active">
+              <NavLink to="/" className="navbar-link" activeClassName="active">
                 Página inicial
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="#" className="navbar-link">
+              <NavLink
+                to="/sobre"
+                className="navbar-link"
+                activeClassName="active"
+              >
                 Sobre Nós
-              </a>
+              </NavLink>
             </li>
-
             <li>
-              <a href="#" className="navbar-link">
+              <NavLink
+                to="/contato"
+                className="navbar-link"
+                activeClassName="active"
+              >
                 Contato
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="#" className="navbar-link">
+              <NavLink
+                to="/projetos"
+                className="navbar-link"
+                activeClassName="active"
+              >
                 Projetos
+              </NavLink>
+            </li>
+            <li>
+              <a
+                href="mailto:contato@alanrocha.dev.br"
+                className="btn btn--primary"
+              >
+                Entrar em Contato
               </a>
             </li>
           </ul>

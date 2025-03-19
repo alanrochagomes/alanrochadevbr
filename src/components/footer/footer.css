@@ -1,6 +1,170 @@
-footer {
-  text-align: center;
-  padding: 2rem;
+.footer {
   background-color: #333;
   color: #fff;
+  padding: 2rem 0;
+  margin: 0;
+  width: 100%;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.footer-section h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-section ul li a:hover {
+  color: #00a8ff;
+  transition: color 0.3s ease;
+}
+
+.footer-section p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #555;
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .footer-section {
+    padding: 0 1rem;
+  }
+
+  .security-seals {
+    justify-content: center;
+  }
+
+  .security-seal {
+    width: 70px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer {
+    padding: 1.5rem 0;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .footer-section {
+    text-align: center;
+    padding: 0;
+  }
+
+  .footer-top {
+    gap: 1.5rem;
+  }
+
+  .footer-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .footer-section ul li {
+    margin-bottom: 0.6rem;
+  }
+
+  .footer-section ul li a,
+  .footer-section p {
+    font-size: 0.85rem;
+  }
+
+  .security-seal {
+    width: 60px;
+  }
+
+  .footer-bottom {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .footer-container {
+    padding: 0 0.5rem;
+  }
+
+  .footer-section h3 {
+    font-size: 1rem;
+  }
+
+  .security-seal {
+    width: 50px;
+  }
+}
+
+.security-seals {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.security-seal {
+  width: 80px;
+  height: auto;
+}
+
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.footer-top .footer-section {
+  flex: 1;
 }

@@ -3,6 +3,8 @@
   justify-content: space-between;
   padding: 1rem;
   background-color: #333;
+  width: 100%;
+  margin: 0;
 }
 
 .menu--principal {
@@ -21,8 +23,12 @@
 }
 
 .navbar {
-  background-color: #333333;
-  border-bottom: 1px solid #ccc;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
 .navbar-container {
@@ -41,18 +47,20 @@
 }
 
 .navbar-logo {
-  height: 40px;
+  height: 60px;
   margin-right: 10px;
+  border-radius: 50px;
 }
 
 .navbar-title {
   font-size: 1.5rem;
   font-weight: bold;
   color: #ffffff;
+  margin-right: 20px;
 }
 
 .navbar-toggle {
-  display: none; /* Hidden for now, can be used for mobile */
+  display: none;
 }
 
 .navbar-menu {
@@ -61,10 +69,10 @@
 
 .navbar-list {
   list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   gap: 1rem;
-  margin: 0;
-  padding: 0;
 }
 
 .navbar-link {
@@ -77,6 +85,74 @@
 
 .navbar-link:hover,
 .navbar-link.active {
-  background-color: #007bff;
-  color: #ffffff;
+  color: #007bff;
+}
+
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #333333;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    z-index: 1000;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .navbar-menu.open {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .navbar-icon {
+    width: 24px;
+    height: 24px;
+    stroke: #ffffff;
+    color: #ffffff;
+  }
+
+  .navbar-list {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-link {
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.2rem;
+  }
+
+  .navbar-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Adicione margem ao link "Página inicial" */
+.navbar-list li:first-child .navbar-link {
+  margin-right: 20px; /* Ajuste conforme necessário */
 }

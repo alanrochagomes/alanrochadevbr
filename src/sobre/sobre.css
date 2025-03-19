@@ -1,0 +1,167 @@
+.sobre-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.sobre-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.sobre-secao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.sobre-texto {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.sobre-imagem img {
+  max-width: 100%;
+  height: auto;
+}
+
+.cta {
+  background-color: #007bff;
+  color: white;
+  padding: 40px;
+  text-align: center;
+  margin: 0;
+  width: 100%;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #004494;
+}
+
+.missao-visao-valores {
+  background-color: #499fd5;
+  color: white;
+  padding: 60px;
+  text-align: center;
+  margin: 0;
+  width: 100%;
+}
+
+.valores-content {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.valor {
+  max-width: 300px;
+  margin: 0 20px;
+  text-align: center;
+  flex: 1;
+  min-width: 250px;
+}
+
+.valor img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
+h3 {
+  font-size: 1.8em;
+}
+
+.nossa-historia {
+  background-color: none;
+  color: #333;
+  padding: 40px;
+  text-align: left;
+  margin: 20px 0;
+  border-radius: none;
+}
+
+.nossa-historia h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.nossa-historia p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.sobre {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+.nossa-historia,
+.cta {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: none;
+  border-radius: 5px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .sobre {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .nossa-historia,
+  .cta {
+    padding: 10px;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+}

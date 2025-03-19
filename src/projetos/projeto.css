@@ -1,0 +1,132 @@
+.portfolio-container {
+  padding: 6rem 8%;
+  background: #f8f9fa;
+}
+
+.portfolio-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.subtitle {
+  color: #0066cc;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.title {
+  color: #1a1a1a;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.portfolio-item {
+  text-align: center;
+}
+
+.laptop {
+  position: relative;
+  width: 100%;
+  padding-top: 62%;
+  margin-bottom: 2rem;
+}
+
+.laptop-screen {
+  position: absolute;
+  top: 0;
+  left: 5%;
+  right: 5%;
+  bottom: 3%;
+  background: #000000;
+  border-radius: 8px;
+  padding: 1.5%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.laptop-screen::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 4px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.site-screenshot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+.laptop-base {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3%;
+  background: linear-gradient(to bottom, #e2e2e2, #d5d5d5);
+  border-radius: 0 0 6px 6px;
+  transform: perspective(800px) rotateX(6deg);
+  transform-origin: top;
+}
+
+.laptop-trackpad {
+  display: none;
+}
+
+.portfolio-item:hover .site-screenshot {
+  transform: scale(1.05);
+}
+
+.site-link {
+  display: inline-block;
+  color: #1a1a1a;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.site-link:hover {
+  color: #0066cc;
+}
+
+@media (max-width: 1200px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-container {
+    padding: 4rem 5%;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+}

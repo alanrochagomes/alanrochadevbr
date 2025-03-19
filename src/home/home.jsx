@@ -1,21 +1,23 @@
 import React from "react";
-import Navbar from "../components/navbar/navbar";
-import Footer from "../components/footer/footer";
+import { Link } from "react-router-dom";
+
 import "../home/home.css";
 
 const Home = () => {
   return (
     <div>
-      <Navbar />
-
       <main id="home" className="main">
         <div className="hero">
-          <h1>Ajuda empresas a se conectarem com o digital</h1>
+          <h1>Hello World!</h1>
           <p>Desenvolvimento de soluções para o seu negócio</p>
 
           <div className="hero-buttons">
-            <button className="btn">Nossos Serviços</button>
-            <button className="btn btn--primary">Entrar em Contato</button>
+            <a href="#nossos-servicos" className="btn-nossos-servicos">
+              Nossos Serviços
+            </a>
+            {/* <Link to="/contato" className="btn btn--primary">
+              Entrar em Contato
+            </Link> */}
           </div>
         </div>
 
@@ -60,7 +62,7 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="our-services">
+        <section id="nossos-servicos" className="our-services">
           <h2>Nossos Serviços</h2>
           <div className="service-grid">
             <div className="service-content">
@@ -144,14 +146,12 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="cta">
+        {/* TODO: <section className="cta">
           <h2>Digitalize seu negócio.</h2>
           <p>Não perca tempo e entre já em contato conosco!</p>
           <button className="btn btn--primary">ENTRE EM CONTATO</button>
-        </section>
+        </section> */}
       </main>
-
-      <Footer />
     </div>
   );
 };

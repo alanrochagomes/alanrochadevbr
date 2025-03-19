@@ -130,8 +130,7 @@ body {
   padding: 2rem;
   font-size: 1.2rem;
   color: #007bff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease,
-    background-color 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 150px;
   text-align: center;
 }
@@ -140,6 +139,7 @@ body {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
+
 .service-item img {
   width: 40px;
   margin-bottom: 1rem;
@@ -190,36 +190,42 @@ body {
 }
 
 .cta {
-  text-align: center;
-  padding: 4rem 1rem;
-  background-color: #0056b3;
-  /* background-image: url("https://www.criacaositesfortaleza.com.br/wp-content/uploads/2018/04/precos-de-criacao-de-sites-baratos.jpg"); */
+  background-image: url("https://st4.depositphotos.com/1008648/22640/i/450/depositphotos_226405696-stock-photo-businessman-blurred-background-using-thin.jpg");
   background-size: cover;
   background-position: center;
-  color: #fff;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  margin: 0;
 }
 
 .cta h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 3em;
+  margin: 0 0 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .cta p {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
+  font-size: 1.5em;
+  margin: 0 0 25px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
-.cta .btn--primary {
+.btn {
+  padding: 12px 24px;
   background-color: #007bff;
+  color: white;
   border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 25px;
-  color: #fff;
+  border-radius: 5px;
   cursor: pointer;
+  font-size: 1.2em;
   transition: background-color 0.3s;
 }
 
-.cta .btn--primary:hover {
+.btn:hover {
   background-color: #0056b3;
 }
 
@@ -289,4 +295,36 @@ body {
   content: "✔";
   color: inherit;
   margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .cta {
+    padding: 40px 10px;
+    height: auto;
+  }
+
+  .cta h2 {
+    font-size: 2.5em;
+  }
+
+  .cta p {
+    font-size: 1.2em;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+}
+
+.btn-nossos-servicos {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn-nossos-servicos:hover {
+  background-color: #0056b3;
 }
